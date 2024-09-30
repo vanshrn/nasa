@@ -8,14 +8,11 @@ url = f"https://api.nasa.gov/neo/rest/v1/feed?api_key={api_key}"
 try:
     # Send the API request
     response = requests.get(url)
-    
+
     # Check if the response is successful
     if response.status_code == 200:
         data = response.json()  # Parse the response as JSON
-        
-        # Print some data for verification
-        print("Successfully fetched asteroid data!")
-        
+
         # Extracting the relevant information
         asteroids = data['near_earth_objects']  # This contains the asteroid data
         
@@ -33,12 +30,13 @@ try:
                     'miss_distance_km': asteroid['close_approach_data'][0]['miss_distance']['kilometers']
                 }
                 asteroid_list.append(asteroid_info)
-        
+
         # Create a DataFrame from the asteroid list
         df = pd.DataFrame(asteroid_list)
-        
-        # Display the DataFrame
-        print(df.head())  # Print the first few rows of the DataFrame
+
+        # Save to CSV
+        df.to_csv('asteroid_data.csv', index=False)
+        print("Data collection complete. Data saved to asteroid_data.csv.")
         
     else:
         print(f"Error: {response.status_code}")
