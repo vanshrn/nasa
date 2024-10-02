@@ -10,13 +10,6 @@ function App() {
       <Navbar></Navbar>
       <div class="header">
         <h1>ASTEROID TRACKER</h1>
-        <div class="nav">
-          <a href="#">HOME</a>
-          <a href="#">ABOUT</a>
-          <a href="#">DISTANCE</a>
-          <a href="#">DIRECTION</a>
-          <a href="#">SEARCH</a>
-        </div>
       </div>
       <div class="search-section">
         <div class="form">
