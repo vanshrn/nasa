@@ -1,0 +1,77 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.header {
+  text-align: center;
+  padding: 20px;
+}
+
+.header h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.search-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  margin-left: 10px;
+  background-image: url('your-image-url-here'); /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.search-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adds a dark overlay */
+}
+
+.search-section .form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 6rem;
+  z-index: 1; /* Ensure form is above the background */
+}
+
+.search-section .form input, 
+.search-section .form button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.search-section .form button {
+  background-color: #ff6600;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.card {
+  background-color: #333333;
+  padding: 20px;
+  border-radius: 10px;
+  width: 30%;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
