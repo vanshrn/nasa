@@ -7,7 +7,7 @@ Features
 - Interactive Visualization: Visualize asteroid paths and their proximity to Earth.
 - NASA API Integration: Fetches data directly from NASA's Near Earth Object Web Service (NeoWs).
 
-  Installation
+Installation
 
 1. Clone the repository:
       git clone https://github.com/vanshrn/nasa.git
