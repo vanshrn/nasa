@@ -14,7 +14,7 @@ function App() {
       <div class="search-section">
         <div class="form">
           <input placeholder="Enter Asteroid Name" type="text" />
-          <input placeholder="Enter Asteroid Size" type="text" />
+          <input placeholder="Enter Asteroid Size" type="range" />
           <input placeholder="Enter Asteroid Distance" type="text" />
           <input placeholder="Enter Asteroid Direction" type="text" />
           <button>SEARCH</button>
