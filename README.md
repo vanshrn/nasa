@@ -9,13 +9,13 @@ Features
 
   Installation
 
-  1. Clone the repository:
+1. Clone the repository:
       git clone https://github.com/vanshrn/nasa.git
       cd nasa
- 2. Install dependencies:
+2. Install dependencies:
       npm install
- 3. Install Packages
+3. Install Packages
       npm install @headlessui/react @heroicons/react
- 4. Start the application:
+4. Start the application:
       npm run dev
     
