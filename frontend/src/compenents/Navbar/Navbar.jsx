@@ -3,8 +3,7 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
   { name: 'Dashboard', href: '#', current: true },
-  { name: 'Team', href: '#', current: false },
-  { name: 'Projects', href: '#', current: false },
+  { name: 'Team', href: '#team', current: false },
   { name: 'Calendar', href: '#', current: false },
 ]
 
@@ -99,7 +98,7 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-
+      
       <DisclosurePanel className="sm:hidden">
         <div className="space-y-1 px-2 pb-3 pt-2">
           {navigation.map((item) => (
@@ -120,4 +119,5 @@ export default function Navbar() {
       </DisclosurePanel>
     </Disclosure>
   )
+  
 }
