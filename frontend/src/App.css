@@ -1,67 +1,114 @@
+/* Body Styles */
 body {
   font-family: 'Arial', sans-serif;
   background-color: #1a1a1a;
   color: #ffffff;
 }
+
+/* Header Styles */
 .header {
   text-align: center;
   padding: 20px;
 }
+
 .header h1 {
   font-size: 3rem;
   font-weight: bold;
 }
+
+/* Navigation Styles */
 .nav {
   display: flex;
   justify-content: center;
   gap: 20px;
   margin-top: 20px;
 }
+
 .nav a {
   color: #ffffff;
   text-decoration: none;
   font-size: 1.2rem;
 }
+
+/* Search Section Styles */
 .search-section {
   display: flex;
   justify-content: space-between;
   padding: 20px;
 }
+
 .search-section .form {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.search-section .form input, .search-section .form button {
+
+.search-section .form input {
+  padding: 10px;
+  border: 1px solid #ccc; /* Add a border to inputs */
+  border-radius: 5px;
+  background-color: #444444; /* Slightly darker background */
+  color: #ffffff; /* Input text color */
+  transition: border-color 0.3s; /* Transition for focus state */
+}
+
+.search-section .form input:focus {
+  border-color: #ff6600; /* Change border color on focus */
+  outline: none; /* Remove default outline */
+}
+
+.search-section .form button {
   padding: 10px;
   border: none;
   border-radius: 5px;
-}
-.search-section .form button {
   background-color: #ff6600;
   color: #ffffff;
   cursor: pointer;
 }
-.search-section .visual {
-  text-align: center;
-}
-.search-section .visual img {
-  width: 100%;
-  max-width: 600px;
-}
+
+/* Cards Section Styles */
 .cards {
   display: flex;
+  flex-wrap: wrap; /* Allow wrapping of cards */
   justify-content: space-around;
   padding: 20px;
 }
-.card {
+
+.result-card {
   background-color: #333333;
   padding: 20px;
   border-radius: 10px;
   width: 30%;
   text-align: center;
+  margin: 10px; /* Add margin around result cards */
+  cursor: pointer; /* Indicate that cards are clickable */
+  transition: transform 0.2s; /* Transition for hover effect */
 }
-.card img {
+
+.result-card:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.detail-section {
+  padding: 20px;
+  text-align: center;
+}
+
+.detail-cards {
+  display: flex;
+  justify-content: space-around; /* Align cards in a row */
+  margin-top: 20px;
+}
+
+.detail-card {
+  background-color: #444444;
+  padding: 20px;
+  border-radius: 10px;
+  width: 30%; /* Set width for detail cards */
+}
+
+.detail-card img {
   width: 100%;
+  max-width: 200px; /* Limit the width of images */
   border-radius: 10px;
 }

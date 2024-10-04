@@ -2,30 +2,25 @@ import csv
 
 # Step 1: Read asteroid data from the CSV file
 def read_from_csv(csv_file_path):
-    asteroid_data = []
-    with open(csv_file_path, mode='r') as file:
-        reader = csv.DictReader(file)  # Read the file as a dictionary
+    data = []
+    with open(csv_file_path, mode='r', newline='') as file:
+        reader = csv.DictReader(file)  # Use DictReader for column access
         for row in reader:
-            asteroid_data.append({
-                "name": row["Asteroid Name"],
-                "id": row["ID"],
-                "estimated_diameter_km": float(row["Estimated Diameter (km)"]),
-                "close_approach_date": row["Close Approach Date"],
-                "miss_distance_km": float(row["Miss Distance (km)"])
+            data.append({
+                "name": row["name"],  # Updated to match the CSV header
+                "estimated_diameter": row["estimated_diameter_meters"],  # Updated to match the CSV header
+                "close_approach_date": row["close_approach_date"],  # Updated to match the CSV header
+                "relative_velocity": row["relative_velocity_kmh"],  # Updated to match the CSV header
+                "miss_distance": row["miss_distance_km"]  # Updated to match the CSV header
             })
-    return asteroid_data
+    return data
 
-# Step 2: Process the data (print or manipulate as needed)
-def process_asteroid_data(asteroid_data):
-    for asteroid in asteroid_data:
-        print(f"Asteroid: {asteroid['name']} (ID: {asteroid['id']})")
-        print(f"  Estimated Diameter: {asteroid['estimated_diameter_km']} km")
-        print(f"  Close Approach Date: {asteroid['close_approach_date']}")
-        print(f"  Miss Distance: {asteroid['miss_distance_km']} km")
-        print("-" * 50)
+# Step 2: Specify the path to your CSV file
+csv_file_path = r"backend\asteroid_data.csv"  # Use a raw string for the path
 
-# Example usage
-if __name__ == "__main__":
-    csv_file_path = "asteroid_data.csv"
-    asteroid_data = read_from_csv(csv_file_path)
-    process_asteroid_data(asteroid_data)
+# Step 3: Read the data from the CSV file
+asteroid_data = read_from_csv(csv_file_path)
+
+# Step 4: Print the fetched asteroid data
+for asteroid in asteroid_data:
+    print(asteroid)
