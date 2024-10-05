@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import Navbar from "./compenents/Navbar";
 import About from "./compenents/About";
-import Navbar from "./compenents/Navbar"; // Corrected spelling
 import Earth from "./spline-viewer/Earth";
 import "./App.css";
 import { Fragment } from "react";
@@ -66,7 +66,7 @@ function App() {
 
         <Routes>
           <Route path="/" element={
-            <div className="flex justify-center p-6 text-black">
+            <div className="flex justify-center p-6">
               <div className="flex flex-col space-y-4">
                 <input
                   className="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
@@ -118,9 +118,8 @@ function App() {
             </div>
           } />
           <Route path="/about" element={<About />} />
-
           {/* Detailed View of Selected Asteroid */}
-          <Route path="/details" element={
+          < Route path="/details" element={
             selectedAsteroid ? (
               <div className="p-6 bg-gray-800 rounded-lg text-white">
                 <button

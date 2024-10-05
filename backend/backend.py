@@ -29,8 +29,10 @@ def search_asteroids():
 
     # Extract query parameters
     search_name = data.get('name', '').lower()
-    search_size = data.get('size', None)
-    search_distance = data.get('distance', None)
+    search_size_min = data.get('size_min', None)
+    search_size_max = data.get('size_max', None)
+    search_distance_min = data.get('distance_min', None)
+    search_distance_max = data.get('distance_max', None)
 
     # Read asteroids data from the CSV file
     asteroids = read_asteroids_from_csv()
@@ -40,9 +42,13 @@ def search_asteroids():
     for asteroid in asteroids:
         if search_name and search_name not in asteroid["name"].lower():
             continue
-        if search_size and not (float(search_size) <= asteroid["estimated_diameter_meters"]):
+        if search_size_min and float(search_size_min) > asteroid["estimated_diameter_meters"]:
             continue
-        if search_distance and not (float(search_distance) >= asteroid["miss_distance_km"]):
+        if search_size_max and float(search_size_max) < asteroid["estimated_diameter_meters"]:
+            continue
+        if search_distance_min and float(search_distance_min) > asteroid["miss_distance_km"]:
+            continue
+        if search_distance_max and float(search_distance_max) < asteroid["miss_distance_km"]:
             continue
         filtered_asteroids.append(asteroid)
 
