@@ -67,7 +67,7 @@ function App() {
         <Routes>
           <Route path="/" element={
             <div className="flex justify-center p-6">
-              <div className="flex flex-col space-y-4">
+              <div className="flex flex-col text-black space-y-4">
                 <input
                   className="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
                   placeholder="Enter Asteroid Name"
