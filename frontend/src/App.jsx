@@ -9,8 +9,10 @@ import { Fragment } from "react";
 function App() {
   // State to manage form inputs
   const [name, setName] = useState("");
-  const [size, setSize] = useState("");
-  const [distance, setDistance] = useState("");
+  const [sizeMin, setSizeMin] = useState("");
+  const [sizeMax, setSizeMax] = useState("");
+  const [distanceMin, setDistanceMin] = useState("");
+  const [distanceMax, setDistanceMax] = useState("");
 
   // State to manage asteroid search results
   const [asteroids, setAsteroids] = useState([]);
@@ -23,8 +25,10 @@ function App() {
     // Create a query based on input values
     const queryParams = {
       name: name,
-      size: size,
-      distance: distance,
+      size_min: sizeMin,
+      size_max: sizeMax,
+      distance_min: distanceMin,
+      distance_max: distanceMax,
     };
 
     try {
@@ -77,16 +81,28 @@ function App() {
             onChange={(e) => setName(e.target.value)}
           />
           <input
-            placeholder="Enter Asteroid Size"
+            placeholder="Enter Min Size"
             type="text"
-            value={size}
-            onChange={(e) => setSize(e.target.value)}
+            value={sizeMin}
+            onChange={(e) => setSizeMin(e.target.value)}
           />
           <input
-            placeholder="Enter Asteroid Distance"
+            placeholder="Enter Max Size"
             type="text"
-            value={distance}
-            onChange={(e) => setDistance(e.target.value)}
+            value={sizeMax}
+            onChange={(e) => setSizeMax(e.target.value)}
+          />
+          <input
+            placeholder="Enter Min Distance"
+            type="text"
+            value={distanceMin}
+            onChange={(e) => setDistanceMin(e.target.value)}
+          />
+          <input
+            placeholder="Enter Max Distance"
+            type="text"
+            value={distanceMax}
+            onChange={(e) => setDistanceMax(e.target.value)}
           />
           <button onClick={searchAsteroids}>SEARCH</button>
         </div>
