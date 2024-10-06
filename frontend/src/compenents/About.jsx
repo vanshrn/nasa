@@ -1,27 +1,27 @@
 import kartik from "../assets/kartik.jpg";
-// import prem from "../assets/prem.jpg";
-// import vansh from "../assets/vansh.jpg";
-// import digant from "../assets/digant.jpg";
+import prem from "../assets/prem.jpg";
+import vansh from "../assets/vansh.jpg";
+import digant from "../assets/digant.jpg";
 
 const teamMembers = [
     {
         name: "Ladani Prem",
         role: "Coder / Problem Solver / Animation",
-        // image: prem, // Use imported image
+        image: prem, // Use imported image
         description:
             "An exceptional coder with a passion for solving problems and creating captivating animations.",
     },
     {
         name: "Vansh Gahlot",
         role: "Coder / Problem Solver / Good Boy",
-        // image: vansh, // Use imported image
+        image: vansh, // Use imported image
         description:
             "A dedicated coder and problem solver, known for his helpful nature and sharp skills.",
     },
     {
         name: "Digant Malviya",
         role: "Full Stack Developer",
-        // image: digant, // Use imported image
+        image: digant, // Use imported image
         description:
             "An expert full-stack developer with a deep knowledge of both front-end and back-end technologies.",
     },

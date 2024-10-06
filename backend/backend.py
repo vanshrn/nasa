@@ -54,5 +54,6 @@ def search_asteroids():
 
     return jsonify(filtered_asteroids)
 
+
 if __name__ == '__main__':
     app.run(debug=True)
