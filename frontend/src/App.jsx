@@ -55,13 +55,7 @@ function App() {
         <Navbar />
         <div className="text-center p-6 bg-gradient-to-r from-blue-500 to-purple-600 text-white">
           <h1 className="text-4xl font-bold mb-4">ASTEROID TRACKER</h1>
-          <nav className="flex justify-center space-x-6">
-            <Link to="/" className="hover:text-yellow-300">HOME</Link>
-            <Link to="/about" className="hover:text-yellow-300">ABOUT</Link>
-            <Link to="/distance" className="hover:text-yellow-300">DISTANCE</Link>
-            <Link to="/direction" className="hover:text-yellow-300">DIRECTION</Link>
-            <Link to="/search" className="hover:text-yellow-300">SEARCH</Link>
-          </nav>
+
         </div>
 
         <Routes>
@@ -117,7 +111,7 @@ function App() {
               )}
             </div>
           } />
-          <Route path="/about" element={<About />} />
+          <Route path="/team" element={<About />} />
           {/* Detailed View of Selected Asteroid */}
           < Route path="/details" element={
             selectedAsteroid ? (
